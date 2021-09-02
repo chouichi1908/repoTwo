@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Home from './pages/Home';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
+import {BrowserRouter as Router,
+  Switch,
+  Route} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+            <Home />
+        </Route>
+        <Route path='/currentweather'>
+            <Page2 />
+        </Route>
+        <Route path='/forecasteachthreehours'>
+            <Page3 />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
