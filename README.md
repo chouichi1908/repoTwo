@@ -6,7 +6,7 @@
     react-routerを使用したページ遷移機能作成
     2画面目,3画面目の都市の天気情報検索機能作成
 
-### てフォルダ構成
+### フォルダ構成
 
     components
         Header.tsx Footer.tsx Search.tsx
