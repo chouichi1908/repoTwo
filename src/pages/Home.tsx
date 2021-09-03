@@ -1,5 +1,5 @@
 import React  from "react";
-import {withRouter} from 'react-router-dom';
+// import {withRouter} from 'react-router-dom';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -25,4 +25,4 @@ function Home(props:any){
 
 
 
-export default withRouter(Home)
+export default Home

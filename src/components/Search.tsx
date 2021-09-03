@@ -20,7 +20,7 @@ function Search(props:any){
 
         <React.Fragment>
             <input type="text" value={city} onChange={(e)=>setCity(e.target.value)}/>
-            <button onClick={handleClick.bind(handleClick,props.type)}>comfirm</button>
+            <button onClick={handleClick.bind(handleClick,props.type)}>confirm</button>
             <p>
                 {result&&JSON.stringify(result,null,2)}
             </p>

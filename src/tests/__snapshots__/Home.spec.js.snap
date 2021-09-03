@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page test Snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="ui inverted vertical segment"
+        style="padding: 1.2em 0em;"
+      >
+        <div
+          class="ui container"
+        >
+          <div
+            class="ui inverted stackable grid"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="three wide column"
+              >
+                <a
+                  class="ui blue inverted header"
+                  href="/"
+                >
+                  Home
+                </a>
+              </div>
+              <div
+                class="three wide column"
+              >
+                <a
+                  class="ui olive inverted header"
+                  href="/currentweather"
+                >
+                  Page2
+                </a>
+              </div>
+              <div
+                class="three wide column"
+              >
+                <a
+                  class="ui violet inverted header"
+                  href="/forecasteachthreehours"
+                >
+                  Page3
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>
+        Home
+      </h1>
+      <h2>
+        This is a weather app for learning.
+      </h2>
+      <img
+        alt="log"
+        src="/logo512.png"
+      />
+      <div
+        class="ui inverted vertical segment"
+        style="padding: 1.2em 0em;"
+      >
+        <div
+          class="ui container"
+        >
+          <div
+            class="ui inverted stackable grid"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="three wide column"
+              >
+                <h4
+                  class="ui violet inverted header"
+                >
+                  关于我们
+                </h4>
+                <div
+                  class="ui inverted link list"
+                  role="list"
+                >
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    网站地图
+                  </a>
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    联系我们
+                  </a>
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    合作公司
+                  </a>
+                </div>
+              </div>
+              <div
+                class="three wide column"
+              >
+                <h4
+                  class="ui violet inverted header"
+                >
+                  友情链接
+                </h4>
+                <div
+                  class="ui inverted link list"
+                  role="list"
+                >
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    Google
+                  </a>
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    Youtube
+                  </a>
+                  <a
+                    class="item"
+                    role="listitem"
+                  >
+                    Instagram
+                  </a>
+                </div>
+              </div>
+              <div
+                class="right floated six wide column"
+              >
+                <h4
+                  class="ui violet inverted header"
+                >
+                  版权声明
+                </h4>
+                <p>
+                  Copyright © Dynamic Gravity 
+                  2021
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="ui inverted vertical segment"
+      style="padding: 1.2em 0em;"
+    >
+      <div
+        class="ui container"
+      >
+        <div
+          class="ui inverted stackable grid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="three wide column"
+            >
+              <a
+                class="ui blue inverted header"
+                href="/"
+              >
+                Home
+              </a>
+            </div>
+            <div
+              class="three wide column"
+            >
+              <a
+                class="ui olive inverted header"
+                href="/currentweather"
+              >
+                Page2
+              </a>
+            </div>
+            <div
+              class="three wide column"
+            >
+              <a
+                class="ui violet inverted header"
+                href="/forecasteachthreehours"
+              >
+                Page3
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>
+      Home
+    </h1>
+    <h2>
+      This is a weather app for learning.
+    </h2>
+    <img
+      alt="log"
+      src="/logo512.png"
+    />
+    <div
+      class="ui inverted vertical segment"
+      style="padding: 1.2em 0em;"
+    >
+      <div
+        class="ui container"
+      >
+        <div
+          class="ui inverted stackable grid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="three wide column"
+            >
+              <h4
+                class="ui violet inverted header"
+              >
+                关于我们
+              </h4>
+              <div
+                class="ui inverted link list"
+                role="list"
+              >
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  网站地图
+                </a>
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  联系我们
+                </a>
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  合作公司
+                </a>
+              </div>
+            </div>
+            <div
+              class="three wide column"
+            >
+              <h4
+                class="ui violet inverted header"
+              >
+                友情链接
+              </h4>
+              <div
+                class="ui inverted link list"
+                role="list"
+              >
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  Google
+                </a>
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  Youtube
+                </a>
+                <a
+                  class="item"
+                  role="listitem"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+            <div
+              class="right floated six wide column"
+            >
+              <h4
+                class="ui violet inverted header"
+              >
+                版权声明
+              </h4>
+              <p>
+                Copyright © Dynamic Gravity 
+                2021
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
