@@ -29,7 +29,7 @@ describe("Home page test", () => {
       </Router>
     );
     userEvent.click(screen.getByText("Page2"));
-    expect(screen.getByRole("mark").textContent).toBe("This is page2");
+    expect(screen.getByRole("contentinfo").textContent).toBe("This is page2");
   });
   test("click link to page3", () => {
     render(
@@ -48,6 +48,6 @@ describe("Home page test", () => {
       </Router>
     );
     userEvent.click(screen.getByText("Page3"));
-    expect(screen.getByRole("mark").textContent).toBe("This is page3");
+    expect(screen.getByRole("contentinfo").textContent).toBe("This is page3");
   });
 });
