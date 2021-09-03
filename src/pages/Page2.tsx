@@ -10,7 +10,7 @@ function Page2(){
     return(
         <React.Fragment>
             <Header />
-            <h1 role='mark'>This is page2</h1>
+            <h1 role='contentinfo'>This is page2</h1>
             <Search type='weather' />
             <img src="/logo512.png" alt="log"/>
             <Footer />
