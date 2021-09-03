@@ -12,6 +12,10 @@
         Header.tsx Footer.tsx Search.tsx
     pages
         Home.tsx Page2.tsx Page3.tsx
+    stores
+        weather.tsx index.tsx hook.tsx
+    tests
+        Home.spec.js
     index.tsx (enter point)
 
 ### 入力

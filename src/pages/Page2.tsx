@@ -6,6 +6,7 @@ import React from 'react';
 
 function Page2(){
 
+    console.log('2画面目')
 
     return(
         <React.Fragment>
