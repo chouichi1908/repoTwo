@@ -4,6 +4,8 @@ import Page2 from "../pages/Page2";
 import Page3 from "../pages/Page3";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import { Provider } from "react-redux";
+import rootStore from "../stores";
 
 describe("Home page test", () => {
   test("Snapshot", () => {
@@ -17,35 +19,42 @@ describe("Home page test", () => {
 
   test("click link to page2", () => {
     render(
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/currentweather">
-            <Page2 />
-          </Route>
-        </Switch>
-      </Router>
+      <Provider store={rootStore}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/currentweather">
+              <Page2 />
+            </Route>
+            <Route path="/forecasteachthreehours">
+              <Page3 />
+            </Route>
+          </Switch>
+        </Router>
+      </Provider>
     );
     userEvent.click(screen.getByText("Page2"));
     expect(screen.getByRole("contentinfo").textContent).toBe("This is page2");
   });
   test("click link to page3", () => {
     render(
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/currentweather">
-            <Page2 />
-          </Route>
-          <Route path="/forecasteachthreehours">
-            <Page3 />
-          </Route>
-        </Switch>
-      </Router>
+      <Provider store={rootStore}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/currentweather">
+              <Page2 />
+            </Route>
+            <Route path="/forecasteachthreehours">
+              <Page3 />
+            </Route>
+          </Switch>
+        </Router>
+      </Provider>
     );
     userEvent.click(screen.getByText("Page3"));
     expect(screen.getByRole("contentinfo").textContent).toBe("This is page3");
