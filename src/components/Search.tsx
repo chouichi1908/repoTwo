@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {useAppDispatch,useAppSelector} from '../stores/hooks'
-import {fetchWeatherData} from '../stores/weather'
+import {fetchWeatherData,reSet} from '../stores/weather'
 
 
 function Search(props: any) {
@@ -14,6 +14,11 @@ function Search(props: any) {
 
     // inputref
     const inputRef = React.createRef<HTMLInputElement>()
+    
+
+    useEffect(()=>{
+        dispatch(reSet());
+    },[inputRef.current?.value,dispatch])
   
   return (
     <React.Fragment>
@@ -21,7 +26,7 @@ function Search(props: any) {
         type="text"
         ref={inputRef}
       />
-      <button onClick={()=>dispatch(fetchWeatherData('weather',inputRef.current?.value))}>
+      <button onClick={()=>dispatch(fetchWeatherData(props.type,inputRef.current?.value))}>
         confirm
       </button>
       <p>{data && JSON.stringify(data, null, 2)}</p>
