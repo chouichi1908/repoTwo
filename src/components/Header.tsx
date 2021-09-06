@@ -1,7 +1,8 @@
 import { Segment, Container, Grid, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import React from "react";
 
-function Nav() {
+const nav = React.memo(() => {
   console.log("render header.");
   return (
     <Segment
@@ -38,6 +39,6 @@ function Nav() {
       </Container>
     </Segment>
   );
-}
+});
 
-export default Nav;
+export default nav;

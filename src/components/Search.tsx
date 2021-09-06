@@ -6,6 +6,7 @@ import "semantic-ui-css/semantic.min.css";
 
 function Search(props: any) {
   // const dispatch = useDispatch();
+  console.log("search");
   const dispatch = useAppDispatch();
 
   useEffect(() => {
