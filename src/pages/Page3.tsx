@@ -1,23 +1,43 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Search from '../components/Search';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Search from "../components/Search";
+import React from "react";
+import { useAppDispatch, useAppSelector } from "../stores/hooks";
+import { fetchWeatherData } from "../stores/weather";
 
+function Page3() {
+  // log
+  console.log("3画面目");
 
-function Page3(){
+  // const data = useSelector(state => state.weather.data);
+  const data = useAppSelector((state) => state.weather.data);
+  const status = useAppSelector((state) => state.weather.status);
+  const errorMessage = useAppSelector((state) => state.weather.errorMessage);
 
+  // dispatch
+  const dispatch = useAppDispatch();
 
-    return(
-        <React.Fragment>
-            <Header />
-            <h1 role='contentinfo'>This is page3</h1>
-            <Search type='forecast'/>
-            <img src="/logo512.png" alt="log"/>
-            <Footer />
-        </React.Fragment>
-    )
+  //inputRef
+  const inputRef = React.createRef<HTMLInputElement>();
 
+  // button click handle
+  const clickHandle = () =>
+    dispatch(fetchWeatherData("forecast", inputRef.current?.value));
+
+  return (
+    <React.Fragment>
+      <Header />
+      <Search
+        inputRef={inputRef}
+        handle={clickHandle}
+        page="page3"
+        data={data}
+        status={status}
+        errorMessage={errorMessage}
+      />
+      <Footer />
+    </React.Fragment>
+  );
 }
-
 
 export default Page3;

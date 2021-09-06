@@ -1,25 +1,18 @@
-import React  from "react";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
+function Home(props: any) {
+  console.log("1画面目");
 
-
-function Home(props:any){
-
-    console.log('1画面目')
-
-    return(
-        
-        <React.Fragment>
-            <Header/>
-            <h1>Home</h1>
-            <h2>This is a weather app for learning.</h2>
-            <img src="/logo512.png" alt="log"/>
-            <Footer />
-        </React.Fragment>
-       
-        
-    )
+  return (
+    <React.Fragment>
+      <Header />
+      <Hero />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
-export default Home
+export default Home;
