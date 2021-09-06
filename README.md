@@ -9,13 +9,13 @@
 ### フォルダ構成
 
     components
-        Header.tsx Footer.tsx Search.tsx
+        Header.tsx Footer.tsx Search.tsx Hero.tsx
     pages
         Home.tsx Page2.tsx Page3.tsx
     stores
         weather.tsx index.tsx hook.tsx
     tests
-        Home.spec.js
+        Home.spec.tsx Page2.spec.tsx
     index.tsx (enter point)
 
 ### 入力

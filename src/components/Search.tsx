@@ -5,9 +5,6 @@ import { List, Icon, Image } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 function Search(props: any) {
-  // log
-  console.log("2画面目");
-
   // const dispatch = useDispatch();
   const dispatch = useAppDispatch();
 
@@ -46,7 +43,7 @@ function Search(props: any) {
           </List.Item>
         </List>
       )}
-      {props.errorMessage && <p>エラーが発生しました。</p>}
+      {props.status === "error" && <p>エラーが発生しました。</p>}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Search from "../components/Search";
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../stores/hooks";
-import { fetchWeatherData } from "../stores/weather";
+import { fetchWeather } from "../stores/weather";
 import "semantic-ui-css/semantic.min.css";
 
 function Page2() {
@@ -11,9 +11,8 @@ function Page2() {
   console.log("2画面目");
 
   // const data = useSelector(state => state.weather.data);
-  const data = useAppSelector((state) => state.weather.data);
-  const status = useAppSelector((state) => state.weather.status);
-  const errorMessage = useAppSelector((state) => state.weather.errorMessage);
+  const data = useAppSelector((state: any) => state.weather.data);
+  const status = useAppSelector((state: any) => state.weather.status);
 
   // dispatch
   const dispatch = useAppDispatch();
@@ -23,7 +22,8 @@ function Page2() {
 
   // button click handle
   const clickHandle = () =>
-    dispatch(fetchWeatherData("weather", inputRef.current?.value));
+    // dispatch(fetchWeatherData("weather", inputRef.current?.value));
+    dispatch(fetchWeather({ type: "weather", city: inputRef.current?.value }));
 
   return (
     <React.Fragment>
@@ -34,7 +34,6 @@ function Page2() {
         page="page2"
         data={data}
         status={status}
-        errorMessage={errorMessage}
       />
       <Footer />
     </React.Fragment>

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Search from "../components/Search";
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../stores/hooks";
-import { fetchWeatherData } from "../stores/weather";
+import { fetchWeather } from "../stores/weather";
 
 function Page3() {
   // log
@@ -12,7 +12,6 @@ function Page3() {
   // const data = useSelector(state => state.weather.data);
   const data = useAppSelector((state) => state.weather.data);
   const status = useAppSelector((state) => state.weather.status);
-  const errorMessage = useAppSelector((state) => state.weather.errorMessage);
 
   // dispatch
   const dispatch = useAppDispatch();
@@ -22,7 +21,7 @@ function Page3() {
 
   // button click handle
   const clickHandle = () =>
-    dispatch(fetchWeatherData("forecast", inputRef.current?.value));
+    dispatch(fetchWeather({ type: "forecast", city: inputRef.current?.value }));
 
   return (
     <React.Fragment>
@@ -33,7 +32,6 @@ function Page3() {
         page="page3"
         data={data}
         status={status}
-        errorMessage={errorMessage}
       />
       <Footer />
     </React.Fragment>
