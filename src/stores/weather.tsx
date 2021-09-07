@@ -4,13 +4,14 @@ import axios, { AxiosRequestConfig } from "axios";
 const initialState = {
   data: null,
   status: "",
+  type: "",
 };
 
 export const fetchWeather = createAsyncThunk(
   "weather/fetchWeather",
   async (
     args: { type: string; city: string | undefined },
-    { rejectWithValue }
+    { fulfillWithValue, rejectWithValue }
   ) => {
     try {
       const config: AxiosRequestConfig = {
@@ -36,7 +37,7 @@ const slice = createSlice({
   initialState: initialState,
   reducers: {
     reSet: () => {
-      return { data: null, status: "" };
+      return { data: null, status: "", type: "" };
     },
   },
   extraReducers: (builder) => {
@@ -46,6 +47,7 @@ const slice = createSlice({
     builder.addCase(fetchWeather.fulfilled, (state, action) => {
       state.status = "complete";
       state.data = action.payload;
+      state.type = action.meta.arg.type;
       // console.log("payload:" + JSON.stringify(action.payload, null, 2));
     });
     builder.addCase(fetchWeather.rejected, (state, action) => {

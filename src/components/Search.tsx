@@ -19,7 +19,7 @@ function Search(props: any) {
       <input type="text" ref={props.inputRef} />
       <button onClick={props.handle}>confirm</button>
 
-      {props.data && (
+      {props.type === "weather" && props.data && (
         <List verticalAlign="middle">
           <List.Item>
             <Icon name="home" color="blue" />
@@ -43,6 +43,9 @@ function Search(props: any) {
             </List.Content>
           </List.Item>
         </List>
+      )}
+      {props.type === "forecast" && props.data && (
+        <p>{JSON.stringify(props.data, null, 2)}</p>
       )}
       {props.status === "error" && <p>エラーが発生しました。</p>}
     </div>

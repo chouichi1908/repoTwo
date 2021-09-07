@@ -12,6 +12,7 @@ function Page3() {
   // const data = useSelector(state => state.weather.data);
   const data = useAppSelector((state) => state.weather.data);
   const status = useAppSelector((state) => state.weather.status);
+  const type = useAppSelector((state) => state.weather.type);
 
   // dispatch
   const dispatch = useAppDispatch();
@@ -32,6 +33,7 @@ function Page3() {
         page="page3"
         data={data}
         status={status}
+        type={type}
       />
       <Footer />
     </React.Fragment>
