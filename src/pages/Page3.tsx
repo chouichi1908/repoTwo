@@ -2,8 +2,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Search from "../components/Search";
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../stores/hooks";
-import { fetchWeather } from "../stores/weather";
+import { useAppSelector } from "../stores/hooks";
+// import { fetchWeather } from "../stores/weather";
 
 function Page3() {
   // log
@@ -15,25 +15,25 @@ function Page3() {
   const type = useAppSelector((state) => state.weather.type);
 
   // dispatch
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
   //inputRef
   const inputRef = React.createRef<HTMLInputElement>();
 
   // button click handle
-  const clickHandle = () =>
-    dispatch(fetchWeather({ type: "forecast", city: inputRef.current?.value }));
+  // const clickHandle = () =>
+  // dispatch(fetchWeather({ type: "forecast", city: inputRef.current?.value }));
 
   return (
     <React.Fragment>
       <Header />
       <Search
         inputRef={inputRef}
-        handle={clickHandle}
         page="page3"
         data={data}
         status={status}
         type={type}
+        datatype="forecast"
       />
       <Footer />
     </React.Fragment>

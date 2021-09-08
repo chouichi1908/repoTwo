@@ -7,6 +7,11 @@ import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
 import rootStore from "../stores";
 
+// global.window = { location: { pathname: null } };
+global.window = Object.assign({}, global.window, {
+  location: { pathname: null },
+});
+
 describe("Home page test", () => {
   test("Snapshot", () => {
     const domTree = render(
@@ -36,7 +41,8 @@ describe("Home page test", () => {
       </Provider>
     );
     userEvent.click(screen.getByText("Page2"));
-    expect(screen.getByRole("contentinfo").textContent).toBe("This is page2");
+    expect(global.window.location.pathname).toEqual("/currentweather");
+    // expect(screen.getByRole("contentinfo").textContent).toBe("This is page2");
   });
   test("click link to page3", () => {
     render(
@@ -57,6 +63,7 @@ describe("Home page test", () => {
       </Provider>
     );
     userEvent.click(screen.getByText("Page3"));
-    expect(screen.getByRole("contentinfo").textContent).toBe("This is page3");
+    expect(global.window.location.pathname).toEqual("/forecasteachthreehours");
+    // expect(screen.getByRole("contentinfo").textContent).toBe("This is page3");
   });
 });

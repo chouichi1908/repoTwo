@@ -11,7 +11,7 @@ export const fetchWeather = createAsyncThunk(
   "weather/fetchWeather",
   async (
     args: { type: string; city: string | undefined },
-    { fulfillWithValue, rejectWithValue }
+    { rejectWithValue }
   ) => {
     try {
       const config: AxiosRequestConfig = {

@@ -1,13 +1,37 @@
 import React, { useEffect } from "react";
 import { useAppDispatch } from "../stores/hooks";
+import { fetchWeather } from "../stores/weather";
 import { reSet } from "../stores/weather";
 import { List, Icon, Image } from "semantic-ui-react";
+import { Formik, Field, Form, FormikHelpers, ErrorMessage } from "formik";
 import "semantic-ui-css/semantic.min.css";
 
-function Search(props: any) {
-  // const dispatch = useDispatch();
+interface SearchProps {
+  inputRef: React.RefObject<HTMLInputElement>;
+  page: string;
+  data: any;
+  status: string;
+  type: string;
+  datatype: string;
+}
+
+interface formData {
+  city: string;
+}
+
+function Search(props: SearchProps) {
   console.log("search");
   const dispatch = useAppDispatch();
+
+  const validateCity = (value: string) => {
+    let error;
+    if (!value) {
+      error = "required";
+    } else if (/^[0-9a-zA-Z]+$/i.test(value)) {
+      error = "英数字はダメです。";
+    }
+    return error;
+  };
 
   useEffect(() => {
     dispatch(reSet());
@@ -16,8 +40,31 @@ function Search(props: any) {
   return (
     <div style={{ minHeight: "78vh" }}>
       <h1 role="contentinfo">This is {props.page}</h1>
-      <input type="text" ref={props.inputRef} />
-      <button onClick={props.handle}>confirm</button>
+
+      <Formik
+        initialValues={{ city: "" }}
+        onSubmit={(
+          values: formData,
+          { setSubmitting }: FormikHelpers<formData>
+        ) => {
+          console.log("city:" + values.city);
+          dispatch(fetchWeather({ type: props.datatype, city: values.city }));
+          setSubmitting(false);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <Field name="city" validate={validateCity}></Field>
+            <ErrorMessage name="city" component="p" />
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </Form>
+        )}
+      </Formik>
+
+      {/* <input type="text" ref={props.inputRef} />
+      <button onClick={props.handle}>confirm</button> */}
 
       {props.type === "weather" && props.data && (
         <List verticalAlign="middle">

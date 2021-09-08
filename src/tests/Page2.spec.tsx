@@ -13,9 +13,9 @@ export const handlers = [
     "https://api.openweathermap.org/data/2.5/weather",
     (req, res, ctx) => {
       const city = req.url.searchParams.get("q");
-      if (city == "tokyo") {
+      if (city == "東京") {
         return res(ctx.json(mockData), ctx.delay(150));
-      } else if (city == "to") {
+      } else if (city == "上海") {
         return res(ctx.status(404, "city name wrong."));
       }
     }
@@ -56,9 +56,9 @@ describe("Page2 tests", () => {
       </Provider>
     );
     const input = screen.getByRole("textbox");
-    userEvent.type(input, "tokyo");
-    expect(screen.getByRole("textbox")).toHaveValue("tokyo");
-    userEvent.click(screen.getByRole("button", { name: /confirm/i }));
+    userEvent.type(input, "東京");
+    expect(screen.getByRole("textbox")).toHaveValue("東京");
+    userEvent.click(screen.getByRole("button", { name: /Submit/i }));
     expect(await screen.findByText(/都市名:Osamu/i)).toBeInTheDocument();
   });
 
@@ -71,9 +71,9 @@ describe("Page2 tests", () => {
       </Provider>
     );
     const input = screen.getByRole("textbox");
-    userEvent.type(input, "to");
-    expect(screen.getByRole("textbox")).toHaveValue("to");
-    userEvent.click(screen.getByRole("button", { name: /confirm/i }));
+    userEvent.type(input, "上海");
+    expect(screen.getByRole("textbox")).toHaveValue("上海");
+    userEvent.click(screen.getByRole("button", { name: /Submit/i }));
     expect(
       await screen.findByText(/エラーが発生しました。/i)
     ).toBeInTheDocument();

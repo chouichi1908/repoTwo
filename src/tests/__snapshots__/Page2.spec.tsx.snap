@@ -61,12 +61,19 @@ Object {
           This is 
           page2
         </h1>
-        <input
-          type="text"
-        />
-        <button>
-          confirm
-        </button>
+        <form
+          action="#"
+        >
+          <input
+            name="city"
+            value=""
+          />
+          <button
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
       </div>
       <div
         class="ui inverted vertical segment"
@@ -222,12 +229,19 @@ Object {
         This is 
         page2
       </h1>
-      <input
-        type="text"
-      />
-      <button>
-        confirm
-      </button>
+      <form
+        action="#"
+      >
+        <input
+          name="city"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
     </div>
     <div
       class="ui inverted vertical segment"
