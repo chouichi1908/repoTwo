@@ -6,7 +6,7 @@ import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { Provider } from "react-redux";
 import store from "../stores";
-import mockData from "./weather.json";
+import mockData from "../mock/weather.json";
 
 export const handlers = [
   rest.get(
