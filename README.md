@@ -12,6 +12,13 @@
         Header.tsx Footer.tsx Search.tsx Hero.tsx
     pages
         Home.tsx Page2.tsx Page3.tsx
+    cucumber
+        specs
+            Page2.feature
+        steps
+            Page2.ts
+    mock
+        weather.json
     stores
         weather.tsx index.tsx hook.tsx
     tests
