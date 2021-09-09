@@ -7,7 +7,6 @@ import { Formik, Field, Form, FormikHelpers, ErrorMessage } from "formik";
 import "semantic-ui-css/semantic.min.css";
 
 interface SearchProps {
-  inputRef: React.RefObject<HTMLInputElement>;
   page: string;
   data: any;
   status: string;
@@ -35,7 +34,7 @@ function Search(props: SearchProps) {
 
   useEffect(() => {
     dispatch(reSet());
-  }, [props.inputRef.current?.value, dispatch]);
+  }, [dispatch]);
 
   return (
     <div style={{ minHeight: "78vh" }}>

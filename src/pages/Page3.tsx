@@ -18,7 +18,7 @@ function Page3() {
   // const dispatch = useAppDispatch();
 
   //inputRef
-  const inputRef = React.createRef<HTMLInputElement>();
+  // const inputRef = React.createRef<HTMLInputElement>();
 
   // button click handle
   // const clickHandle = () =>
@@ -28,7 +28,6 @@ function Page3() {
     <React.Fragment>
       <Header />
       <Search
-        inputRef={inputRef}
         page="page3"
         data={data}
         status={status}
