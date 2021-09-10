@@ -40,15 +40,17 @@ function Search(props: SearchProps) {
     <div style={{ minHeight: "78vh" }}>
       <h1 role="contentinfo">This is {props.page}</h1>
 
+      {/* formik don't validate agian after commit if you dont reset form */}
       <Formik
         initialValues={{ city: "" }}
         onSubmit={(
           values: formData,
-          { setSubmitting }: FormikHelpers<formData>
+          { setSubmitting, resetForm }: FormikHelpers<formData>
         ) => {
           console.log("city:" + values.city);
           dispatch(fetchWeather({ type: props.datatype, city: values.city }));
           setSubmitting(false);
+          resetForm({ values: { city: "" } });
         }}
       >
         {({ isSubmitting }) => (
@@ -101,7 +103,7 @@ function Search(props: SearchProps) {
           </List.Item>
           {props.data.list.map((item: any) => {
             return (
-              <List.Item>
+              <List.Item key={item.dt}>
                 <List.Content>
                   <List.Description>
                     <Image

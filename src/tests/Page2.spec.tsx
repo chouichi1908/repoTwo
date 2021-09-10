@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import store from "../stores";
 import mockData from "../mock/weather.json";
 
-export const handlers = [
+const handlers = [
   rest.get(
     "https://api.openweathermap.org/data/2.5/weather",
     (req, res, ctx) => {

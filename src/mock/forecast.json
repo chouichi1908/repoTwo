@@ -1,0 +1,72 @@
+{
+    "cod": "200",
+    "message": 0,
+    "cnt": 40,
+    "list": [{
+            "dt": 1592298000,
+            "main": {
+                "temp": 28.35,
+                "feels_like": 26.78,
+                "temp_min": 27.17,
+                "temp_max": 28.35,
+                "pressure": 1000,
+                "sea_level": 1001,
+                "grnd_level": 997,
+                "humidity": 56,
+                "temp_kf": 1.18
+            },
+            "weather": [{
+                "id": 802,
+                "main": "Clouds",
+                "description": "scattered clouds",
+                "icon": "03d"
+            }],
+            "clouds": {
+                "all": 36
+            },
+            "wind": {
+                "speed": 6.68,
+                "deg": 178
+            },
+            "sys": {
+                "pod": "d"
+            },
+            "dt_txt": "2020-06-16 09:00:00"
+        },
+        {
+            "dt": 1592308800,
+            "main": {
+                "temp": 26.21,
+                "feels_like": 24.81,
+                "temp_min": 25.31,
+                "temp_max": 26.21,
+                "pressure": 1002,
+                "sea_level": 1003,
+                "grnd_level": 998,
+                "humidity": 57,
+                "temp_kf": 0.9
+            },
+            "weather": [{
+                "id": 500,
+                "main": "Rain",
+                "description": "light rain",
+                "icon": "10n"
+            }],
+            "clouds": {
+                "all": 37
+            },
+            "wind": {
+                "speed": 5.4,
+                "deg": 41
+            },
+            "rain": {
+                "3h": 0.25
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "dt_txt": "2020-06-16 12:00:00"
+        }
+    ],
+    "city":{"name":"Midsiberia1908"}
+}
