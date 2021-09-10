@@ -91,7 +91,31 @@ function Search(props: SearchProps) {
         </List>
       )}
       {props.type === "forecast" && props.data && (
-        <p>{JSON.stringify(props.data, null, 2)}</p>
+        // <p>{JSON.stringify(props.data, null, 2)}</p>
+        <List verticalAlign="middle">
+          <List.Item>
+            <Icon name="home" color="blue" />
+            <List.Content>
+              <List.Header>都市名:{props.data.city.name}</List.Header>
+            </List.Content>
+          </List.Item>
+          {props.data.list.map((item: any) => {
+            return (
+              <List.Item>
+                <List.Content>
+                  <List.Description>
+                    <Image
+                      avatar
+                      src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                    />
+                    <b>日付:</b> {item.dt_txt} <b>気温:</b>
+                    {item.main.temp}
+                  </List.Description>
+                </List.Content>
+              </List.Item>
+            );
+          })}
+        </List>
       )}
       {props.status === "error" && <p>エラーが発生しました。</p>}
     </div>
